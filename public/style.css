@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#video-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    height: 300px;
+    width:400px;
+    /* used for img and video. maintains the aspect ratio when window is resized */
+    object-fit: cover;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+.main__left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.8;
+    background-color:rgba(0,0,0,0.8);
+}
+.main__left__videos {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__left__controls {
+    display: flex;
+    justify-content: space-between;
+    background: #1C1E20;
+}
+.main__right {
+    display:flex;
+    flex-direction: column;
+    flex: 0.2;
+    background: #242324;
+}
+.main__right__header {
+    color: #f5f5f5;
+    text-align:center;
+    padding: 12px;
+
+}
+.main__chat_window {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+.main__message_container {
+    padding: 12px 12px;
+    display: flex;
+}
+.main__message_container input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: #f5f5f5;
+
+}
+.controls__container {
+    display: flex;
+    color: #D2D2D2;
+    padding: 5px;
+}
+.controls__button {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor:pointer;
+}
+
+.leave_meeting {
+    color: red;
+}
+.messages {
+    overflow: scroll;
+}
+.messages li {
+    color: #f5f5f5;
+    list-style: none;
+    padding: 5px;
+}
